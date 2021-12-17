@@ -39,11 +39,27 @@ options(scipen=999)
 library(ggplot2)
 data("midwest", package = "ggplot2")
 theme_set(theme_atsu())
+gm <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+     geom_point(aes(col=state, size=popdensity)) + 
+     geom_smooth(method="loess", se=F) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
+     labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest") +
+ scale_color_atsu(palette = "main", discrete = TRUE, reverse = FALSE)
+
+plot(gm)
+
+gb <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+     geom_point(aes(col=state, size=popdensity)) + 
+     geom_smooth(method="loess", se=F) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
+     labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest") +
+ scale_color_atsu(palette = "blues", discrete = TRUE, reverse = FALSE)
+
+plot(gb)
+
 gg <- ggplot(midwest, aes(x=area, y=poptotal)) + 
      geom_point(aes(col=state, size=popdensity)) + 
      geom_smooth(method="loess", se=F) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
      labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest") +
- scale_fill_atsu(palette = "main", discrete = F, reverse = FALSE)
+ scale_color_atsu(palette = "grays", discrete = TRUE, reverse = FALSE)
 
 plot(gg)
 ```
