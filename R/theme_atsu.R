@@ -1,3 +1,4 @@
+#' Create atsu colors from hex codes
 atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Dark Blue" = "#172940",
                  "Light Blue" = "#63BEF2",
@@ -18,6 +19,7 @@ atsu_cols <- function(...) {
   atsu_colors[cols]
 }
 
+#' Create custom palettes using ATSU colors
 atsu_palettes <- list(
   `main`  = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray 1", "Cool Gray 9", "Cool Gray 11"),
   `blues` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue"),
