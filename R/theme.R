@@ -1,45 +1,12 @@
-#' @include utilities.R
-#' @import ggplot2
-NULL
 #'Publication ready theme from ggpubr
-#'
-#'@description \itemize{ \item \strong{theme_atsu()}: Create a publication ready
-#'  theme \item \strong{theme_pubclean()}: a clean theme without axis lines, to
-#'  direct more attention to the data.  \item \strong{labs_atsu()}: Format only
-#'  plot labels to a publication ready style \item \strong{theme_classic2()}:
-#'  Create a classic theme with axis lines. \item \strong{clean_theme()}: Remove
-#'  axis lines, ticks, texts and titles. \item \strong{clean_table_theme()}:
-#'  Clean the the theme of a table, such as those created by
-#'  \code{\link{ggsummarytable}()}}.
-#'@param base_size base font size
-#'@param base_family base font family
-#'@param border logical value. Default is FALSE. If TRUE, add panel border.
-#'@param margin logical value. Default is TRUE. If FALSE, reduce plot margin.
-#'@param legend character specifying legend position. Allowed values are one of
-#'  c("top", "bottom", "left", "right", "none"). Default is "top" side position.
-#'  to remove the legend use legend = "none". Legend position can be also
-#'  specified using a numeric vector c(x, y).  In this case it is possible to
-#'  position the legend inside the plotting area. x and y are the coordinates of
-#'  the legend box. Their values should be between 0 and 1. c(0,0) corresponds
-#'  to the "bottom left" and c(1,1) corresponds to the "top right" position. For
-#'  instance use legend = c(0.8, 0.2).
-#'@param x.text.angle Rotation angle of x axis tick labels. Default value is 0.
-#'  Use 90 for vertical text.
-#'@param flip logical. If TRUE, grid lines are added to y axis instead of x
-#'  axis.
-#' @examples
-#' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
-#'    geom_point(aes(color = gear))
-#'
-#' # Default plot
-#' p
-#'
-#' # Use theme_atsu()
-#' p + theme_atsu()
-#'
-#' # Format labels
-#' p + labs_atsu()
-#'
+#'@param base_size base font size given in pts
+#'@param base_family base family
+#'@param border logical if a border should be used
+#'@param margin logical if margin should be used
+#'@param legend location of legend placement
+#'@param x.text.angle angle of x axis text
+#'@param flip logical if x and y axis should be flipped
+#'Basic theme for ATSU
 #'@name theme_atsu
 #'@rdname theme_atsu
 #'@export
@@ -53,7 +20,7 @@ theme_atsu <- function (base_size = 15, base_family = "",
   if(x.text.angle > 5) xhjust <- 1 else xhjust <- NULL
 
   if(border){
-    panel.border <- ggplots::element_rect(fill = NA, colour = "black", size = 0.7)
+    panel.border <- ggplot2::element_rect(fill = NA, colour = "black", size = 0.7)
     axis.line <- ggplot2::element_blank()
   }
   else{
@@ -84,6 +51,7 @@ theme_atsu <- function (base_size = 15, base_family = "",
   .theme
 }
 
+#' ATSU clean theme
 #' @rdname theme_atsu
 #' @export
 theme_atsu_clean <- function (base_size = 15, base_family = "", flip = FALSE)
@@ -109,7 +77,7 @@ theme_atsu_clean <- function (base_size = 15, base_family = "", flip = FALSE)
   res
 }
 
-
+#' Label theme
 #' @rdname theme_atsu
 #' @export
 labs_atsu <- function(base_size = 15, base_family = ""){
@@ -133,7 +101,7 @@ labs_atsu <- function(base_size = 15, base_family = ""){
   )
 }
 
-
+#' Add a clean theme
 #' @export
 #' @rdname theme_atsu
 clean_theme <- function()
@@ -150,6 +118,7 @@ clean_theme <- function()
   )
 }
 
+#' Add clean table theme
 #' @export
 #' @rdname theme_atsu
 clean_table_theme <- function ()

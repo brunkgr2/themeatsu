@@ -20,5 +20,4 @@ URL: https://github.com/brunkgr2/themeatsu
 BugReports: https://github.com/brunkgr2/themeatsu/issues
 Collate: 
     'palette.R'
-    'utilities.R'
     'theme.R'
