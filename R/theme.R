@@ -41,7 +41,7 @@ theme_atsu <- function (base_size = 15, base_family = "",
           axis.line = axis.line,
           axis.text = ggplot2::element_text(color = "black"),
           legend.key = ggplot2::element_blank(),
-          strip.background = ggplot2::element_rect(fill = "#63BEF2", color = "black", size = 0.7),
+          strip.background = ggplot2::element_rect(fill = atsu_cols("Light Blue"), color = "black", size = 0.7),
           plot.margin = plot.margin,
           legend.position = legend,
           complete = TRUE)
@@ -66,13 +66,13 @@ theme_atsu_clean <- function (base_size = 15, base_family = "", flip = FALSE)
     )
   if(flip){
     res <- res + ggplot2::theme(
-      panel.grid.major.x = ggplot2::element_line(linetype = "dotted", color = "Cool Gray 9"),
+      panel.grid.major.x = ggplot2::element_line(linetype = "dotted", color = atsu_cols("Cool Gray 9")),
       axis.line.y = ggplot2::element_line(color = "black")
     )
   }
   else{
     res <- res + ggplot2::theme(
-      panel.grid.major.y = ggplot2::element_line(linetype = "dotted", color = "Cool Gray 9")
+      panel.grid.major.y = ggplot2::element_line(linetype = "dotted", color = atsu_cols("Cool Gray 9"))
     )
   }
   res
