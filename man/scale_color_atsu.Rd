@@ -4,7 +4,7 @@
 \alias{scale_color_atsu}
 \title{Color scale constructor for atsu colors}
 \usage{
-scale_color_atsu(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_color_atsu(palette, discrete, reverse, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in atsu_palettes}

@@ -4,7 +4,7 @@
 \alias{scale_fill_atsu}
 \title{Fill scale constructor for atsu colors}
 \usage{
-scale_fill_atsu(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_atsu(palette, discrete, reverse, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in atsu_palettes}

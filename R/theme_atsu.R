@@ -1,7 +1,3 @@
-##############################
-# Create custom color palette
-##############################
-
 atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Dark Blue" = "#172940",
                  "Light Blue" = "#63BEF2",
@@ -23,7 +19,9 @@ atsu_cols <- function(...) {
 }
 
 atsu_palettes <- list(
-  `main`  = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray 1", "Cool Gray 9", "Cool Gray 11")
+  `main`  = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray 1", "Cool Gray 9", "Cool Gray 11"),
+  `blues` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue"),
+  `grays` = atsu_cols("Cool Gray 1", "Cool Gray 9", "Cool Gray 11")
 )
 
 #' Return function to interpolate a atsu color palette
@@ -32,7 +30,7 @@ atsu_palettes <- list(
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
-atsu_pal <- function(palette = "main", reverse = FALSE, ...) {
+atsu_pal <- function(palette, reverse, ...) {
   pal <- atsu_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -49,7 +47,7 @@ atsu_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
 
-scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_color_atsu <- function(palette, discrete, reverse, ...) {
   pal <- atsu_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
@@ -67,7 +65,7 @@ scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE,
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
-scale_fill_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_fill_atsu <- function(palette, discrete, reverse , ...) {
   pal <- atsu_pal(palette = palette, reverse = reverse)
 
   if (discrete) {

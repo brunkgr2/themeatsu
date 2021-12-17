@@ -4,7 +4,7 @@
 \alias{atsu_pal}
 \title{Return function to interpolate a atsu color palette}
 \usage{
-atsu_pal(palette = "main", reverse = FALSE, ...)
+atsu_pal(palette, reverse, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in atsu_palettes}
