@@ -28,7 +28,6 @@ This is a basic example which shows you how to use ATSU colors:
 library(themeatsu)
 options(scipen=999)
 library(ggplot2)
-library(themeatsu)
 data("midwest", package = "ggplot2")
 theme_set(theme_bw())
 gg <- ggplot(midwest, aes(x=area, y=poptotal)) + 
