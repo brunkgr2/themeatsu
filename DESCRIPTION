@@ -7,7 +7,9 @@ Maintainer: Mark Brunk-Grady <markbrunkgrady@atsu.edu>
 Description: Creates custome color palette and theme to be used
     for statistical analyses done at AT Still University.
 License: GPL (>= 3)
-Imports: ggplot2
+Imports: 
+    dichromat,
+    ggplot2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2

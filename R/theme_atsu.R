@@ -37,7 +37,7 @@ atsu_pal <- function(palette, reverse, ...) {
 
   if (reverse) pal <- rev(pal)
 
-  colorRampPalette(pal, ...)
+  dichromat::colorRampPalette(pal, ...)
 }
 
 #' Color scale constructor for atsu colors
@@ -53,9 +53,9 @@ scale_color_atsu <- function(palette, discrete, reverse, ...) {
   pal <- atsu_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("colour", paste0("atsu_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("atsu_", palette), palette = pal, ...)
   } else {
-    scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
   }
 }
 
@@ -71,8 +71,8 @@ scale_fill_atsu <- function(palette, discrete, reverse , ...) {
   pal <- atsu_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("fill", paste0("atsu_", palette), palette = pal, ...)
+    ggplots::discrete_scale("fill", paste0("atsu_", palette), palette = pal, ...)
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    ggplots::scale_fill_gradientn(colours = pal(256), ...)
   }
 }
