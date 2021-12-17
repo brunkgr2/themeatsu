@@ -1,0 +1,11 @@
+Package: theme_atsu
+Type: Package
+Title: ATSU statistical report theme
+Version: 0.1.0
+Author: Mark Brunk-Grady
+Maintainer: Mark Brunk-Grady <markbrunkgrady@atsu.edu>
+Description: Creates custome color palette and theme to be used
+    for statistical analyses done at AT Still University.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
