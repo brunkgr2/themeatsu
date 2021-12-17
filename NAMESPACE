@@ -1,3 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("grDevices", "colorRampPalette")
-importFrom("ggplot2", "scale_fill_gradientn", "discrete_scale")
+importFrom("ggplot2", "scale_fill_gradientn", "discrete_scale", "%+replace%", "element_blank",
+           "theme", "rel", "element_rect", "element_text")
