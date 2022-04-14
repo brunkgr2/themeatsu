@@ -67,7 +67,7 @@ scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE,
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
-scale_fill_atsu <- function(palette = "main", discrete = FALSE, reverse = FALSE, ...) {
+scale_fill_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- atsu_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
