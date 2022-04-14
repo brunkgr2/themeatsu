@@ -54,8 +54,7 @@ gb <- ggplot(midwest, aes(x=area, y=poptotal)) +
 plot(gb)
 #> `geom_smooth()` using formula 'y ~ x'
 #> Warning: Removed 15 rows containing non-finite values (stat_smooth).
-
-#> Warning: Removed 15 rows containing missing values (geom_point).
+#> Removed 15 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-example-2.png" width="100%" />
@@ -70,8 +69,7 @@ gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
 plot(gg)
 #> `geom_smooth()` using formula 'y ~ x'
 #> Warning: Removed 15 rows containing non-finite values (stat_smooth).
-
-#> Warning: Removed 15 rows containing missing values (geom_point).
+#> Removed 15 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-example-3.png" width="100%" />
