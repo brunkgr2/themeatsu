@@ -25,8 +25,8 @@ atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Blue" = "#001489",
                  "Dark Gold" = "#85714D",
                  "Wheat" = "#FFD451",
-                 "RK Red" = "#E31837",
-                 "RK Gold" = "#FFB81C",
+                 "CK Red" = "#E31837",
+                 "CK Gold" = "#FFB81C",
                  "Packer Green" = "#203731",
                  "Packer Gold" = "#FFB612",
                  "Sporting Blue" = "#91B0D5",
@@ -35,11 +35,7 @@ atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Pens Gold" = "#CFC493",
                  "Yellow" = "#FCB514",
                  "Burgundy" = "#6F263D",
-<<<<<<< HEAD
                  "Avs Blue" = "#236192"
-=======
-                 "Avs Blue" = "#236192",
->>>>>>> a5a41780b9026dbc927f42a59f5702018fda983e
                  )
 
 #' Function to extract atsu colors as hex codes
@@ -57,9 +53,23 @@ atsu_cols <- function(...) {
 
 #' Create custom palettes using ATSU colors
 atsu_palettes <- list(
-  `main`  = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray 1", "Cool Gray 9", "Cool Gray 11"),
-  `blues` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue"),
-  `grays` = atsu_cols("Cool Gray 1", "Cool Gray 9", "Cool Gray 11")
+  `atsu`  = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray 1", "Cool Gray 9", "Cool Gray 11"),
+  `blues` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Royal Blue",
+                      "Sporting Blue", "Dark Indigo", "Avs Blue", "Blue", "Great Lakes Blue"),
+  `grays` = atsu_cols("Cool Gray 1", "Cool Gray 9", "Cool Gray 11", "Cat Light Gray",
+                      "Cat Gray", "White", "Black", "Gray", "Silver", "Lead"),
+  `mke` = atsu_cols("White", "Black", "Good Land Green", "Cream City Cream",
+                    "Great Lakes Blue", "Red", "Hunter Green", "Gray",
+                    "MKE Purple", "Silver", "Retro Green", "Retro Brown", "Blue",
+                    "Dark Gold", "Wheat", "Packer Green", "Packer Gold"),
+  `kc` = atsu_cols("Royal Purple", "Cats Light Gray", "Cat Gray", "White", "Black",
+                   "RK Red", "RK Gold", "Royal Blue", "Royal Gold", "Sporting Blue", "Dark Indigo", "Lead"),
+  `main` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray1", "Cool Gray 9", "Cool Gray 11",
+                     "Royal Purple", "Cat Light Gray", "Cat Gray", "White", "Black", "Good Land Green",
+                     "Cream City Cream", "Great Lakes Blue", "Red", "Hunter Green", "Gray", "MKE Purple",
+                     "Silver", "Retro Green", "Retro Brown", "Royal Blue", "Royal Gold", "Blue", "Dark Gold",
+                     "Wheat", "CK Red", "CK Gold", "Packer Green", "Packer Gold", "Sporting Blue",
+                     "Dark Indigo", "Lead", "Pens Gold", "Yellow", "Burgundy", "Avs Blue")
 )
 
 #' Return function to interpolate a atsu color palette
