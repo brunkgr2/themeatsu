@@ -5,7 +5,7 @@
 \alias{atsu_colors}
 \title{Create atsu colors from hex codes}
 \format{
-An object of class \code{character} of length 6.
+An object of class \code{character} of length 37.
 }
 \usage{
 atsu_colors

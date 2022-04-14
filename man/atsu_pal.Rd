@@ -4,10 +4,12 @@
 \alias{atsu_pal}
 \title{Return function to interpolate a atsu color palette}
 \usage{
-atsu_pal(palette, reverse, ...)
+atsu_pal(palette, discrete, reverse, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in atsu_palettes}
+
+\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 
