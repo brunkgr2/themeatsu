@@ -58,23 +58,25 @@ atsu_palettes <- list(
                       "Sporting Blue", "Dark Indigo", "Avs Blue", "Blue", "Great Lakes Blue"),
   `grays` = atsu_cols("Cool Gray 1", "Cool Gray 9", "Cool Gray 11", "Cat Light Gray",
                       "Cat Gray", "White", "Black", "Gray", "Silver", "Lead"),
-  `mke` = atsu_cols("White", "Black", "Good Land Green", "Cream City Cream",
+  `mke` = atsu_cols("Good Land Green", "Cream City Cream",
                     "Great Lakes Blue", "Red", "Hunter Green", "Gray",
                     "MKE Purple", "Silver", "Retro Green", "Retro Brown", "Blue",
                     "Dark Gold", "Wheat", "Packer Green", "Packer Gold"),
-  `kc` = atsu_cols("Royal Purple", "Cats Light Gray", "Cat Gray", "White", "Black",
-                   "RK Red", "RK Gold", "Royal Blue", "Royal Gold", "Sporting Blue", "Dark Indigo", "Lead"),
+  `kc` = atsu_cols("Royal Purple", "Cats Light Gray", "Cat Gray", "RK Red", "RK Gold",
+                   "Royal Blue", "Royal Gold", "Sporting Blue", "Dark Indigo", "Lead"),
   `main` = atsu_cols("ATSU Blue", "Dark Blue", "Light Blue", "Cool Gray1", "Cool Gray 9", "Cool Gray 11",
                      "Royal Purple", "Cat Light Gray", "Cat Gray", "White", "Black", "Good Land Green",
                      "Cream City Cream", "Great Lakes Blue", "Red", "Hunter Green", "Gray", "MKE Purple",
                      "Silver", "Retro Green", "Retro Brown", "Royal Blue", "Royal Gold", "Blue", "Dark Gold",
                      "Wheat", "CK Red", "CK Gold", "Packer Green", "Packer Gold", "Sporting Blue",
-                     "Dark Indigo", "Lead", "Pens Gold", "Yellow", "Burgundy", "Avs Blue")
+                     "Dark Indigo", "Lead", "Pens Gold", "Yellow", "Burgundy", "Avs Blue"),
+  `random` = rand_pal()
 )
 
 #' Return function to interpolate a atsu color palette
 #'
 #' @param palette Character name of palette in atsu_palettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
@@ -84,6 +86,14 @@ atsu_pal <- function(palette, reverse, ...) {
   if (reverse) pal <- rev(pal)
 
   grDevices::colorRampPalette(pal, ...)
+}
+
+#' Function to randomly select n colors from atsu_cols
+#'
+#' @param n Numeric value of length of colors to sample
+#'
+rand_pal <- function(n) {
+  sample(atsu_cols(), n:length("main"), replace = F)
 }
 
 #' Color scale constructor for atsu colors
