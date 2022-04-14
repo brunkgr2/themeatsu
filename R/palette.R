@@ -80,7 +80,7 @@ atsu_palettes <- list(
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
-atsu_pal <- function(palette, reverse, ...) {
+atsu_pal <- function(palette, discrete, reverse, ...) {
   pal <- atsu_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -92,6 +92,7 @@ atsu_pal <- function(palette, reverse, ...) {
 #'
 #' @param n Numeric value of length of colors to sample
 #'
+
 rand_pal <- function(n) {
   sample(atsu_cols(), n:length("main"), replace = F)
 }
