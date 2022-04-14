@@ -64,7 +64,7 @@ gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
      geom_point(aes(col=state, size=popdensity)) + 
      geom_smooth(method="loess", se=F, col = atsu_cols("Cool Gray 9")) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
      labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest") +
- scale_color_atsu(palette = "grays", discrete = TRUE)
+ scale_color_atsu(palette = "mke", discrete = TRUE)
 
 plot(gg)
 #> `geom_smooth()` using formula 'y ~ x'
