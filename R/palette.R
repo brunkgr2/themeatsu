@@ -93,7 +93,7 @@ atsu_pal <- function(palette, discrete, reverse, ...) {
 #'
 
 rand_pal <- function(n) {
-  sample(atsu_cols(), n:length("main"), replace = F)
+  sample(as.data.frame(atsu_cols)[,1], n, replace = F)
 }
 
 #' Color scale constructor for atsu colors
@@ -106,7 +106,7 @@ rand_pal <- function(n) {
 #'
 
 scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
-  pal <- atsu_pal(palette = palette, reverse = reverse)
+  pal <- atsu_pal(palette = palette, discrete = discrete, reverse = reverse)
 
   if (discrete) {
     ggplot2::discrete_scale("colour", paste0("atsu_", palette), palette = pal, ...)
@@ -115,16 +115,18 @@ scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE,
   }
 }
 
+
 #' Fill scale constructor for atsu colors
 #'
 #' @param palette Character name of palette in atsu_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
+#' @param random Boolean indicating whether to randomly choose colors from selected palette
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
 scale_fill_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
-  pal <- atsu_pal(palette = palette, reverse = reverse)
+  pal <- atsu_pal(palette = palette, discrete = discrete, reverse = reverse)
 
   if (discrete) {
     ggplot2::discrete_scale("fill", paste0("atsu_", palette), palette = pal, ...)
