@@ -10,7 +10,7 @@
 #'@name theme_atsu
 #'@rdname theme_atsu
 #'@export
-theme_atsu <- function (base_size = 15, base_family = "",
+theme_atsu <- function (base_size = 20, base_family = "",
                         border = FALSE, margin = TRUE,
                         legend = c("top", "bottom", "left", "right", "none"),
                         x.text.angle = 0)
@@ -55,7 +55,7 @@ theme_atsu <- function (base_size = 15, base_family = "",
 #' ATSU clean theme
 #' @rdname theme_atsu
 #' @export
-theme_atsu_clean <- function (base_size = 15, base_family = "", flip = FALSE)
+theme_atsu_clean <- function (base_size = 20, base_family = "", flip = FALSE)
 {
   res <- ggplot2::theme_grey(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
@@ -81,7 +81,7 @@ theme_atsu_clean <- function (base_size = 15, base_family = "", flip = FALSE)
 #' Label theme
 #' @rdname theme_atsu
 #' @export
-labs_atsu <- function(base_size = 15, base_family = ""){
+labs_atsu <- function(base_size = 20, base_family = ""){
   ggplot2::theme(
     text = ggplot2::element_text(family = base_family,
                         face = "plain", colour = "black", size = base_size, lineheight = 0.9,

@@ -15,8 +15,6 @@ scale_fill_atsu(palette = "main", discrete = TRUE, reverse = FALSE, ...)
 
 \item{...}{Additional arguments passed to discrete_scale() or
 scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE}
-
-\item{random}{Boolean indicating whether to randomly choose colors from selected palette}
 }
 \description{
 Fill scale constructor for atsu colors
