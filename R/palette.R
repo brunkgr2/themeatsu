@@ -35,7 +35,11 @@ atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Pens Gold" = "#CFC493",
                  "Yellow" = "#FCB514",
                  "Burgundy" = "#6F263D",
+<<<<<<< HEAD
                  "Avs Blue" = "#236192"
+=======
+                 "Avs Blue" = "#236192",
+>>>>>>> a5a41780b9026dbc927f42a59f5702018fda983e
                  )
 
 #' Function to extract atsu colors as hex codes
