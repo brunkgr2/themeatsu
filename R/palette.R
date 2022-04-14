@@ -121,7 +121,6 @@ scale_color_atsu <- function(palette = "main", discrete = TRUE, reverse = FALSE,
 #' @param palette Character name of palette in atsu_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
-#' @param random Boolean indicating whether to randomly choose colors from selected palette
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
