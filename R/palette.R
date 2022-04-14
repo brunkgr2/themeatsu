@@ -70,7 +70,7 @@ atsu_palettes <- list(
                      "Silver", "Retro Green", "Retro Brown", "Royal Blue", "Royal Gold", "Blue", "Dark Gold",
                      "Wheat", "CK Red", "CK Gold", "Packer Green", "Packer Gold", "Sporting Blue",
                      "Dark Indigo", "Lead", "Pens Gold", "Yellow", "Burgundy", "Avs Blue"),
-  `random` = rand_pal()
+  `random` = rand_pal
 )
 
 #' Return function to interpolate a atsu color palette
