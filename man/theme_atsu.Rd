@@ -9,7 +9,7 @@
 \title{Publication ready theme from ggpubr}
 \usage{
 theme_atsu(
-  base_size = 15,
+  base_size = 20,
   base_family = "",
   border = FALSE,
   margin = TRUE,
@@ -17,9 +17,9 @@ theme_atsu(
   x.text.angle = 0
 )
 
-theme_atsu_clean(base_size = 15, base_family = "", flip = FALSE)
+theme_atsu_clean(base_size = 20, base_family = "", flip = FALSE)
 
-labs_atsu(base_size = 15, base_family = "")
+labs_atsu(base_size = 20, base_family = "")
 
 clean_theme()
 
