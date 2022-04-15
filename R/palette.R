@@ -38,6 +38,7 @@ atsu_colors <- c("ATSU Blue" = "#3487B7",
                  "Avs Blue" = "#236192"
                  )
 
+
 #' Function to extract atsu colors as hex codes
 #'
 #' @param ... Character names of atsu_colors
@@ -50,6 +51,7 @@ atsu_cols <- function(...) {
 
   atsu_colors[cols]
 }
+
 
 #' Create custom palettes using ATSU colors
 atsu_palettes <- list(
@@ -72,6 +74,7 @@ atsu_palettes <- list(
                      "Dark Indigo", "Lead", "Pens Gold", "Yellow", "Burgundy", "Avs Blue")
 )
 
+
 #' Return function to interpolate a atsu color palette
 #'
 #' @param palette Character name of palette in atsu_palettes
@@ -87,14 +90,18 @@ atsu_pal <- function(palette, discrete, reverse, ...) {
   grDevices::colorRampPalette(pal, ...)
 }
 
+
+
 #' Function to randomly select n colors from atsu_cols
 #'
 #' @param n Numeric value of length of colors to sample
 #'
 
 rand_pal <- function(n) {
-  sample(as.data.frame(atsu_cols)[,1], n, replace = F)
+  sample(as.data.frame(atsu_colors)[,1], n, replace = F)
 }
+
+
 
 #' Color scale constructor for atsu colors
 #'
