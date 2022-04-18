@@ -108,7 +108,7 @@ data(iris)
 names(iris)
 names(iris) <- fix_names(names(iris), 
                          patterns = c("."), 
-                         replacements = c(""), 
+                         replacements = c("_"), 
                          case = "lower")
 
 names(iris)

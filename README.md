@@ -119,9 +119,9 @@ names(iris)
 #> [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"
 names(iris) <- fix_names(names(iris), 
                          patterns = c("."), 
-                         replacements = c(""), 
+                         replacements = c("_"), 
                          case = "lower")
 
 names(iris)
-#> [1] "" "" "" "" ""
+#> [1] "sepal_length" "sepal_width"  "petal_length" "petal_width"  "species"
 ```

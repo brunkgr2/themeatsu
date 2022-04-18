@@ -3,9 +3,11 @@ test_that("random color function", {
   }
 )
 
+
+data(iris)
 x <- names(iris)
 x <- tolower(x)
-x <- stringi::stri_replace_all_regex(x, pattern = ".", "_", vectorize_all = F)
+x <- stringi::stri_replace_all_fixed(x, pattern = ".", "_", vectorize_all = F)
 
 test_that("fix names", {
   expect_equal(fix_names(names(iris),
@@ -14,3 +16,4 @@ test_that("fix names", {
                          case = "lower"), x)
   }
 )
+
