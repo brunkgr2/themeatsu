@@ -9,7 +9,7 @@
 
 fix_names <- function(x, patterns, replacements, case){
 
-  x <- stringi::stri_replace_all_regex(x,
+  x <- stringi::stri_replace_all_fixed(x,
                                        pattern = patterns,
                                        replacement = replacements,
                                        vectorize_all = FALSE)
